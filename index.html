@@ -1,50 +1,179 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ByteForge Studios | BeatBox</title>
-    <style>
-        body {
-            background-color: #0b0b0b;
-            color: white;
-            font-family: 'Segoe UI', sans-serif;
-            text-align: center;
-            margin: 0; padding: 0;
-        }
-        .header {
-            padding: 100px 20px;
-            background: linear-gradient(180deg, #1a1a1a 0%, #0b0b0b 100%);
-        }
-        h1 { font-size: 3rem; letter-spacing: 5px; color: #00ff88; }
-        p { color: #888; font-size: 1.2rem; }
-        .btn {
-            display: inline-block;
-            padding: 15px 30px;
-            background: linear-gradient(45deg, #00ff88, #0077ff);
-            color: black;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 30px;
-            margin-top: 20px;
-            transition: 0.3s;
-        }
-        .btn:hover { transform: scale(1.1); box-shadow: 0 0 20px #00ff88; }
-        .footer { margin-top: 50px; font-size: 0.8rem; color: #444; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ByteForge Studios</title>
+  <meta name="description" content="ByteForge Studios - Crafting software with precision, performance and purpose." />
+  <meta name="author" content="ByteForge Studios" />
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-soft: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #38bdf8;
+      --card: #020617;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, var(--bg), var(--bg-soft));
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 1px;
+    }
+
+    header span {
+      color: var(--accent);
+    }
+
+    header p {
+      max-width: 640px;
+      margin: 1rem auto 0;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: linear-gradient(180deg, var(--card), #020617aa);
+      border-radius: 16px;
+      padding: 2rem;
+      border: 1px solid #1e293b;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+    }
+
+    .card h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.25rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .cta {
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .cta a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.9rem 1.6rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      color: var(--bg);
+      background: var(--accent);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .cta a.secondary {
+      background: transparent;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+    }
+
+    .cta a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(56, 189, 248, 0.25);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-top: 1px solid #1e293b;
+    }
+  </style>
 </head>
 <body>
-    <div class="header">
-        <h1>BYTEFORGE STUDIOS</h1>
-        <p>Forging the future, one byte at a time.</p>
-        <hr style="width: 50px; border: 1px solid #00ff88;">
-        <h2>BeatBox</h2>
-        <p>Müziği sadece dinleme, hisset.</p>
-        <a href="LINK_BURAYA" class="btn">APK İNDİR (v1.0)</a>
+
+  <header>
+    <h1><span>ByteForge</span> Studios</h1>
+    <p>
+      We forge clean, efficient and scalable software.
+      No fluff. Just solid engineering.
+    </p>
+  </header>
+
+  <main>
+    <section class="grid">
+      <div class="card">
+        <h3>Performance First</h3>
+        <p>
+          Every line of code is written with speed, memory and efficiency in mind.
+          If it’s slow, it’s wrong.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Clean Architecture</h3>
+        <p>
+          Maintainable, readable and future-proof structures.
+          Chaos belongs in games, not in codebases.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Open Source</h3>
+        <p>
+          We believe transparency builds better software.
+          Public code, real commits, real responsibility.
+        </p>
+      </div>
+    </section>
+
+    <div class="cta">
+      <a href="https://github.com/ByteForge-Studios" target="_blank">
+        View GitHub
+      </a>
+      <a class="secondary" href="#" onclick="alert('Coming soon.')">
+        Projects
+      </a>
     </div>
-    <div class="footer">
-        © 2026 ByteForge Studios.
-    </div>
+  </main>
+
+  <footer>
+    © 2026 ByteForge Studios · Built with precision and caffeine
+  </footer>
+
 </body>
 </html>
-
